@@ -13,7 +13,8 @@ Junit 4.12
  - No retorno, pega-se o primeiro valor inserido que não se repete ou lança uma exception.
 
 ### Testes:
-  mvn test
+
+```mvn test```
 
  - Cenário 1 (aAbBABacafj): String que não contém o caractere que atendam as regras especificadas. Neste cenário é validado se o método lança a exception.
 
@@ -40,4 +41,6 @@ A diferença principal entre as duas formas de navegarmos em uma Stream seja par
 
 Para que possamos utilizar o parallel stream, é importante que a coleção seja ordenada ou que não dependamos desta ordem para obter o resultado esperado. Mesmo que a chamada tenha característica em que permita executar um parallelstrem, isto não é garantia de melhoria de performance, visto que também dependerá dos recursos alocados para o serviço que está executando, ou seja, o número de CPUs.
 
-Devemos utilizar o Stream para coleções com 
+Devemos utilizar o Stream para coleções em que a característica do serviço já é exerce paralelismo (como recebimento de requests assíncronos de um rest service) e a coleção não tem um tamanho muito grande.
+
+O ParallelStream deve ser utilizado quando tempos problemas de performance e trabalhamos com coleções muito grandes.
