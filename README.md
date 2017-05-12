@@ -35,7 +35,7 @@ Neste cenário, uma boa solução seria implementar soluções que consomem e re
 Outra solução quando trabalhamos com auto recover e que os dados podem ser recebidos novamente semq ue haja impacto no negócio, seria trabalhar com multithread de forma assíncrona dentro do serviço e caso este exceda o número de threads ou de recursos alocados para aquele serviço, restartado para que o processo seja reiniciado (isto não deveria ser utilizado por exemplo quando o deadlock ocorre por chamadas circular).
 
 
-## Uma das grandes inclusões no Java 8 foi a API Stream. Com ela podemos fazer diversas operações de loop, filtros, maps, etc. Porém, existe uma variação bem interessante do Stream que é ParallelStreams. Descreva com suas palavras quando qual é a diferença entre os dois e quando devemos utilizar cada um deles
+## Descreva com suas palavras quando qual é a diferença entre Stream e ParallelStream os dois e quando devemos utilizar cada um deles
 
 A diferença principal entre as duas formas de navegarmos em uma Stream seja para fazer um mapeamento, aplicar um filtro, uma redução ou executar alguma função, é que o Stream funciona de forma serial, e o ParallelStream funciona de forma paralela, ou seja abre várias threads para executar a função.
 
